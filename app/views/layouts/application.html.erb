@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to "Add category", new_category_path %>
+<%= link_to "List categories", root_path %>
+<%= link_to "Add post", new_post_path %>
+<%= link_to "List posts", posts_path %>
 
 <%= yield %>
 

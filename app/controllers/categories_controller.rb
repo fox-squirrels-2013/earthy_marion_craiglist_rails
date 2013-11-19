@@ -8,9 +8,17 @@ class CategoriesController < ApplicationController
 	end
 
 	def create
-    #Create the new category
-    #take the user back to index
     Category.create!(:name => params[:name])
     redirect_to '/'
 	end
+
+	def show
+		@category = Category.find(params[:id])
+	end
+
+	def destroy
+		Category.destroy(params[:id])
+		redirect_to '/'
+	end
+
 end

@@ -1,7 +1,8 @@
 EarthyMarionCraiglistRails::Application.routes.draw do
    root :to => 'categories#index'
 
-   resources :categories, :only => [:new, :create]
+   resources :categories, :only => [:new, :create, :show, :destroy]
+   resources :posts, :only => [:index, :new, :create, :show, :edit, :destroy]
 
 
   # The priority is based upon order of creation:

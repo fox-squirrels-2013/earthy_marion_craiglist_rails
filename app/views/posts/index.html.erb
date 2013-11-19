@@ -1,0 +1,7 @@
+<h2>List Posts</h2>
+
+<% @posts.each do |post| %>
+	<%= link_to "X", post, method: :delete %>
+	<%= link_to post.name, post_path(id: post.id) %><br>
+
+<% end %>
